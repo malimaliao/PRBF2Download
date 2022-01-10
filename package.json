@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "dist": "build"
+    "dist": "electron-builder"
   },
   "author": "Project Reality",
   "build": {
@@ -28,7 +28,7 @@
     }
   },
   "devDependencies": {
-    "electron": "latest",
+    "electron": "4.2.12",
     "electron-builder": "latest"
   }
 }
