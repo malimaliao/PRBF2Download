@@ -59,7 +59,6 @@ $(() => {
 
     function onCancelButtonPress() {
         win.setProgressBar(0, {mode: "normal"});
-        if(!paused && client.torrents[0]){client.remove(client.torrents[0]);}
         win.loadFile('./app/cancel.html')
     }
 
@@ -104,7 +103,6 @@ $(() => {
 
 
     function onTorrentPauseButtonPress() {
-        win.setProgressBar(client.progress, {mode: "paused"});
         $('#torrent-start').css('color','white');
         $('#torrent-pause').css('color','#5a5757');
         engine.swarm.resume();
