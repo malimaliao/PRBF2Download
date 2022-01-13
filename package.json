@@ -6,6 +6,7 @@
   "dependencies": {
     "humanize-duration": "latest",
     "pretty-bytes": "latest",
+    "rimraf": "latest",
     "torrent-stream": "bsuh/torrent-stream"
   },
   "scripts": {
