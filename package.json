@@ -1,16 +1,17 @@
 {
   "name": "PRBF2-Download-Assistant",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "Download tool for PR:BF2",
   "main": "./app/main.js",
   "dependencies": {
     "humanize-duration": "latest",
     "pretty-bytes": "latest",
-    "webtorrent": "^0.108.1"
+    "rimraf": "latest",
+    "torrent-stream": "bsuh/torrent-stream"
   },
   "scripts": {
     "start": "electron .",
-    "dist": "build"
+    "dist": "electron-builder"
   },
   "author": "Project Reality",
   "build": {
@@ -28,7 +29,7 @@
     }
   },
   "devDependencies": {
-    "electron": "latest",
+    "electron": "4.2.12",
     "electron-builder": "latest"
   }
 }
