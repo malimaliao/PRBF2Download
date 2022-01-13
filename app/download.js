@@ -89,7 +89,6 @@ $(() => {
     }
 
     function onCloseButtonPress() {
-        app.quit();
         win.close();
     }
 

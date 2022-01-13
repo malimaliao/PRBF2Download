@@ -27,7 +27,6 @@ $(() => {
     }
 
     function onCloseButtonPress() {
-        app.quit();
         win.close();
     }
 
@@ -45,9 +44,7 @@ $(() => {
     }
 
     function onCancelButtonPress() {
-        app.quit();
         win.close();
-
     }
 
     function onCancelAndRemoveButtonPress() {
@@ -58,7 +55,6 @@ $(() => {
             console.log(err)
         }
         fs.unlinkSync(configPath);
-        app.quit();
         win.close();
     }
 

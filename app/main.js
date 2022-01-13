@@ -43,6 +43,11 @@ function createWindow() {
 
 }
 
+// Quit when all windows are closed.
+app.on('window-all-closed', function() {
+    app.quit();
+})
+
 app.setAppUserModelId("PRBF2-Download-Assistant");
 app.on('ready', createWindow);
 

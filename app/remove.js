@@ -27,7 +27,6 @@ $(() => {
     }
 
     function onCloseButtonPress() {
-        app.quit();
         win.close();
     }
 
@@ -52,7 +51,6 @@ $(() => {
             console.log(err)
         }
         fs.unlinkSync(configPath);
-        app.quit();
         win.close();
     }
 
