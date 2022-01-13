@@ -197,33 +197,36 @@ $(() => {
             }, 1000);
 
             engine.on('idle', function () {
-                win.setProgressBar(1, {mode: "normal"});
-                completed = true;
-                app.setAppUserModelId("PRBF2-Download-Assistant");
-                let notification = {
-                    title: "PR:BF2 Download Assistant",
-                    body: "Download Complete",
-                    icon: './assets/icons/png/256x256.png'
-                };
-                let myNotification = new window.Notification(notification.title, notification);
+                if(!completed){
+                    win.setProgressBar(1, {mode: "normal"});
+                    completed = true;
+                    app.setAppUserModelId("PRBF2-Download-Assistant");
+                    let notification = {
+                        title: "PR:BF2 Download Assistant",
+                        body: "Download Complete",
+                        icon: './assets/icons/png/256x256.png'
+                    };
+                    let myNotification = new window.Notification(notification.title, notification);
 
-                myNotification.onclick = () => {
-                    win.show();
-                };
-                $('#progress-bar').attr('aria-valuenow', 100);
-                $('#progress-bar').css('width', 100 + '%');
-                $('#progress-bar').text('Completed');
-                $('#progress-bar').attr('class', 'progress-bar progress-bar-striped');
-                $('#progress-information').css('visibility', 'hidden');
-                $('#install-container').css('visibility', 'visible');
-                // $('#torrent-pause').css('visibility', 'hidden');
-                // $('#torrent-start').css('visibility', 'hidden');
-                clearInterval(interval);
-                $('#install-instructions').text('');
-                $('#install-button').css('visibility', 'visible');
-                $('#cancel-button').css('visibility', 'hidden');
-                $('#remove-button').css('visibility', 'visible');
-                engine.destroy();
+                    myNotification.onclick = () => {
+                        win.show();
+                    };
+                    $('#progress-bar').attr('aria-valuenow', 100);
+                    $('#progress-bar').css('width', 100 + '%');
+                    $('#progress-bar').text('Completed');
+                    $('#progress-bar').attr('class', 'progress-bar progress-bar-striped');
+                    $('#progress-information').css('visibility', 'hidden');
+                    $('#install-container').css('visibility', 'visible');
+                    // $('#torrent-pause').css('visibility', 'hidden');
+                    // $('#torrent-start').css('visibility', 'hidden');
+                    clearInterval(interval);
+                    $('#install-instructions').text('');
+                    $('#install-button').css('visibility', 'visible');
+                    $('#cancel-button').css('visibility', 'hidden');
+                    $('#remove-button').css('visibility', 'visible');
+                    engine.destroy();
+                }
+
             })
         });
     });
