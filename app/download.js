@@ -144,7 +144,7 @@ $(() => {
 
     getTorrentMagnet(function(torrent_magnetname){
         opts = {}
-        opts.name = "'PRBF2DownloadAssistantFiles"
+        opts.name = "TorrentFiles"
         opts.tmp = app.getPath('userData');
         opts.path = getDownloadStoragePath();
         opts.fastresume = true;

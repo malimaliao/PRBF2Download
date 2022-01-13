@@ -46,6 +46,7 @@ $(() => {
 
     function onRemoveButtonPress() {
         try{
+            rimraf.sync(path.join(app.getPath('userData'), 'PRBF2DownloadAssistantFiles'));
             rimraf.sync(installerPath);
         }catch(err){
             console.log(err)
