@@ -147,7 +147,7 @@ $(() => {
         opts.name = "'PRBF2DownloadAssistantFiles"
         opts.tmp = app.getPath('userData');
         opts.path = getDownloadStoragePath();
-
+        opts.fastresume = true;
         var engine = torrents(torrent_magnetname, opts);
 
         engine.on('ready', function () {

@@ -6,7 +6,7 @@
   "dependencies": {
     "humanize-duration": "latest",
     "pretty-bytes": "latest",
-    "torrent-stream": "^1.0.2"
+    "torrent-stream": "bsuh/torrent-stream"
   },
   "scripts": {
     "start": "electron .",
