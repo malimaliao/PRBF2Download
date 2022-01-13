@@ -53,7 +53,7 @@ $(() => {
     function onCancelAndRemoveButtonPress() {
         try{
             rimraf.sync(installerPath);
-            rimraf.sync(path.join(app.getPath('userData'), 'PRBF2DownloadAssistantFiles'));
+            rimraf.sync(path.join(app.getPath('userData'), 'TorrentFiles',"*"));
         }catch(err){
             console.log(err)
         }
